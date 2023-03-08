@@ -1,0 +1,32 @@
+﻿@model List<Profissional.Models.Domain.Employee>
+@{
+}
+
+<h1>Profissionais</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Tel</th>
+            <th>RG</th>
+            <th>Adress</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var profissional in Model)
+        {
+            <tr>
+                <td>@profissional.Id</td>
+                <td>@profissional.Name</td>
+                <td>@profissional.Tel</td>
+                <td>@profissional.RG</td>
+                <td>@profissional.Adress</td>
+                <td>@profissional.Salary</td>
+                <td><a href="Profissionais/View/@profissional.Id">Conteudo</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
